@@ -11,7 +11,7 @@ const Header = () => {
       <div className="container header-container">
         <Link to="/" className="logo">
           <FaStar className="logo-icon" />
-          <span>TodoStar</span>
+          <span>StarNote</span>
         </Link>
 
         <nav className="nav">

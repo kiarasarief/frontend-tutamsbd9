@@ -9,11 +9,10 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-content">
           <p className="copyright">
-            &copy; {currentYear} TodoStar. All rights reserved.
+            &copy; {currentYear} StarNote. By Putri Kiara Salsabila Arief
           </p>
           <p className="made-with">
-            Made with <FaHeart className="heart-icon" /> and{" "}
-            <FaStar className="star-icon" />
+            Tugas Tambahan Praktikum Sistem Basis Data Modul 9
           </p>
         </div>
       </div>
