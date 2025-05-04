@@ -13,8 +13,12 @@ export const TodoProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // API base URL
-  const API_URL = "http://localhost:5000/api/todos";
+  // API base URL - menggunakan variabel lingkungan
+  const API_URL = import.meta.env.VITE_API_URL
+    ? `${import.meta.env.VITE_API_URL}/api/todos`
+    : "http://localhost:5000/api/todos";
+
+  console.log("Using API URL:", API_URL);
 
   // Fetch all todos
   const fetchTodos = useCallback(async () => {
@@ -24,13 +28,15 @@ export const TodoProvider = ({ children }) => {
     try {
       const response = await axios.get(API_URL);
       setTodos(response.data);
+      console.log("Todos fetched successfully:", response.data);
     } catch (error) {
       setError(error.response?.data?.message || "Failed to fetch todos");
       toast.error("Failed to load todos");
+      console.error("Error fetching todos:", error);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [API_URL]);
 
   // Add a new todo
   const addTodo = async (text) => {
