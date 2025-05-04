@@ -12,6 +12,9 @@ const Footer = () => {
             &copy; {currentYear} StarNote. By Putri Kiara Salsabila Arief
           </p>
           <p className="made-with">
+            Made with <FaHeart className="heart-icon" />
+          </p>
+          <p className="copyright2">
             Tugas Tambahan Praktikum Sistem Basis Data Modul 9
           </p>
         </div>
