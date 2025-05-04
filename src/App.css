@@ -1,0 +1,76 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-content {
+  flex: 1;
+  padding: var(--space-5) 0;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-primary-light);
+  color: #333;
+}
+
+.dark-theme .btn-primary {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .card {
+  background-color: var(--color-card-light);
+  border: 1px solid var(--color-border-light);
+  box-shadow: 0 4px 12px var(--color-shadow-light);
+}
+
+.dark-theme .card {
+  background-color: var(--color-card-dark);
+  border: 1px solid var(--color-border-dark);
+  box-shadow: 0 4px 12px var(--color-shadow-dark);
+}
+
+.card {
+  border-radius: 12px;
+  padding: var(--space-4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation classes */
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s infinite ease-in-out;
+}

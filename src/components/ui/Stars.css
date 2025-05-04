@@ -1,0 +1,26 @@
+.stars-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
+}
+
+.star.light {
+  background-color: rgba(184, 216, 232, 0.8);
+  box-shadow: 0 0 5px 1px rgba(184, 216, 232, 0.5);
+}
+
+.star.dark {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+}

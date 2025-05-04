@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light Theme Colors */
+  --color-bg-light: #fff8e8;
+  --color-text-light: #333333;
+  --color-primary-light: #b8d8e8;
+  --color-secondary-light: #ffd8be;
+  --color-accent-light: #ffaaa5;
+  --color-card-light: #ffffff;
+  --color-border-light: #e0e0e0;
+  --color-shadow-light: rgba(0, 0, 0, 0.05);
+  --color-hover-light: rgba(184, 216, 232, 0.2);
+  --color-success-light: #a0e7a0;
+  --color-error-light: #ffaaa5;
+
+  /* Dark Theme Colors */
+  --color-bg-dark: #1f2937;
+  --color-text-dark: #f3f4f6;
+  --color-primary-dark: #3b82f6;
+  --color-secondary-dark: #4b5563;
+  --color-accent-dark: #f97316;
+  --color-card-dark: #374151;
+  --color-border-dark: #4b5563;
+  --color-shadow-dark: rgba(0, 0, 0, 0.2);
+  --color-hover-dark: rgba(59, 130, 246, 0.2);
+  --color-success-dark: #34d399;
+  --color-error-dark: #f87171;
+
+  /* Spacing System (8px) */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 1rem; /* 16px */
+  --space-4: 1.5rem; /* 24px */
+  --space-5: 2rem; /* 32px */
+  --space-6: 3rem; /* 48px */
+
+  /* Font Settings */
+  --font-primary: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-light);
+}
+
+body.dark-theme {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input,
+textarea {
+  font-family: var(--font-primary);
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-2);
+  }
+}

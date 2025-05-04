@@ -1,0 +1,80 @@
+.todo-form {
+  margin-bottom: var(--space-4);
+  width: 100%;
+}
+
+.form-control {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.todo-input {
+  flex: 1;
+  padding: var(--space-3);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.light-theme .todo-input {
+  background-color: white;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border-light);
+  box-shadow: 0 2px 4px var(--color-shadow-light);
+}
+
+.dark-theme .todo-input {
+  background-color: var(--color-secondary-dark);
+  color: var(--color-text-dark);
+  border: 1px solid var(--color-border-dark);
+  box-shadow: 0 2px 4px var(--color-shadow-dark);
+}
+
+.todo-input:focus {
+  box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.dark-theme .todo-input:focus {
+  box-shadow: 0 0 0 2px var(--color-primary-dark);
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.light-theme .add-button {
+  background-color: var(--color-primary-light);
+  color: var(--color-text-light);
+}
+
+.dark-theme .add-button {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-dark);
+}
+
+.add-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .form-control {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
